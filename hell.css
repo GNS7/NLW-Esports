@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/fundo.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  background-color: #121214;
+}
+
+header {
+  padding-bottom: 32px;
+  height: calc(120px + 40px);
+}
+
+header div {
+  width: 140px;
+  margin: auto;
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img {
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+main * {
+  /*border: 1px solid red;*/
+}
+
+main {
+  max-width: 90%;
+  width: 90%;
+  max-height: 20%;
+  height: 30%;
+  margin: auto;
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  font-family: "Inter", sans-serif;
+  line-height: 160%;
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: rgb(68, 68, 68);
+  padding: 24px 32px 32px;
+  border-radius: 8px;
+  border-top: 1px solid;
+}
+
+section h2 {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.47px;
+}
+
+section p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.18px;
+}
+
+section ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: row;*/
+  /*align-items: flex-start;*/
+  padding: 0;
+  gap: 16px;
+  margin-top: 24px;
+  /*animation: 3s infinite alternate slidein;*/
+}
+
+.games-list img {
+  width: 90px;
+  border-radius: 8px;
+  border: 2px solid rgb(150, 0, 255);
+  transition: transform 0.3s;
+}
+
+.games-list img:hover {
+  transform: scale(1.1);
+}
+
+.streamers-list img {
+  width: 90px;
+  border-radius: 50%;
+  border: 2px solid rgb(150, 0, 255);
+  transition: transform 0.3s;
+}
+
+.streamers-list img:hover {
+  transform: scale(1.1);
+}
+
+#socials {
+  transition: transform 0.3s;
+}
+
+#socials li:hover {
+  transform: scale(1.1);
+}
+
+//////////*Animation*/////////////
+
+@keyframes fromTop {
+  from {
+    opacity: 0.1;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes EaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header div {
+  /*animation: fromTop 0.2s 0.1s backwards;*/
+  animation: EaseIn 2s backwards;
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main section {
+  animation: fromBottom 0.7s;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0s backwards;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.05s backwards;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.1s backwards;
+}
